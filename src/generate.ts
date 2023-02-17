@@ -17,11 +17,11 @@ fs.readdir(parentFolder, (err, files) => {
 
   const data = JSON.stringify(filteredFolders);
 
-  fs.writeFile('artists.json', data, (err) => {
+  fs.writeFile('./assets/artistsFromSorted.json', data, (err) => {
     if (err) {
       console.error(`Error writing to file: ${err}`);
       return;
     }
-    console.log('Filtered folders saved to artists.json');
+    console.log('Filtered folders saved to artistsFromSorted.json');
   });
 });

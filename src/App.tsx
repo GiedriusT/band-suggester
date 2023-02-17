@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import artists from './assets/artists.json'
+import artistsFromSorted from './assets/artistsFromSorted.json'
+import artistsManual from './assets/artistsManual.json'
+
+const artists = [...artistsFromSorted, ...artistsManual];
 
 function getRandomArtist() {
   const randomArtist = artists[Math.floor(Math.random() * artists.length)]
