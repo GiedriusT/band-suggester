@@ -10,12 +10,16 @@ function getRandomArtist() {
   return randomArtist
 }
 
+function formatArtistNameForUrl(artistName: string) {
+  return artistName.toLowerCase().replace(/ /g, '%20');
+}
+
 function App() {
   const [randomArtist, setRandomArtist] = useState(getRandomArtist())
 
   return (
     <div className="App">
-      <h1>{randomArtist}</h1>
+      <h1><a href={`spotify:search:${formatArtistNameForUrl(randomArtist)}`} target="_blank">{randomArtist}</a></h1>
       <div className="card">
         <button onClick={() => setRandomArtist(getRandomArtist())}>
           Next artist
