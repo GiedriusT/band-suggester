@@ -1,3 +1,5 @@
+// This is utility that generates the list of band and artist names from
+// my music collection.
 import * as fs from 'fs';
 
 // Get the parent folder path from the command line arguments
